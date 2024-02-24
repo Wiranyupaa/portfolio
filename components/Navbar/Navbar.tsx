@@ -1,5 +1,7 @@
 import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import dummy from "../../Data/dummy.json";
+import Link from "next/link";
 
 interface Props {
   openNav: () => void;
@@ -17,7 +19,16 @@ const Navbar = ({ openNav }: Props) => {
         </div>
 
         <ul className="md:flex hidden items-center space-x-10 mx-5">
-          <li>
+          {dummy.map((dummyy, index) => (
+            <li className="nav_link">
+              <Link key={index} href={dummyy.path}>
+                {JSON.stringify(dummyy.page).split(/(?<!\\)"/)}{" "}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* <li>
             <a className="nav_link" href="#">
               Home
             </a>
@@ -36,8 +47,8 @@ const Navbar = ({ openNav }: Props) => {
             <a className="nav_link" href="#">
               Contact
             </a>
-          </li>
-        </ul>
+          </li> */}
+
         <FaBarsStaggered
           onClick={openNav}
           className="w-6 h-6 mx-5 text-black md:hidden rotate-180"

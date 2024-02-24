@@ -1,5 +1,7 @@
 import React from "react";
 import { RxCross2 } from "react-icons/rx";
+import dummy from "../../Data/dummy.json";
+import Link from "next/link";
 
 interface Props {
   showNav: boolean;
@@ -16,38 +18,13 @@ const NavMobile = ({ closeNav, showNav }: Props) => {
         <ul
           className={`fixed flex ${navOpenStyle} items-center flex-col justify-center h-[100%] transform transition-all duration-300 delay-250  w-[100%] bg-black space-y-14 z-[10010]`}
         >
-          <li>
-            <a
-              className="nav_link text-white text-[25px] sm:text-[30px]"
-              href="#"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav_link text-white text-[25px] sm:text-[30px]"
-              href="#"
-            >
-              About me
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav_link text-white text-[25px] sm:text-[30px]"
-              href="#"
-            >
-              Project
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav_link text-white text-[25px] sm:text-[30px]"
-              href="#"
-            >
-              Contact
-            </a>
-          </li>
+          {dummy.map((dummyy, index) => (
+            <li className="nav_link text-white text-[25px] sm:text-[30px]">
+              <Link key={index} href={dummyy.path}>
+                {JSON.stringify(dummyy.page).split(/(?<!\\)"/)}{" "}
+              </Link>
+            </li>
+          ))}
           <RxCross2
             onClick={closeNav}
             className="absolute top-[1.4rem]  right-[1.4rem] w-[2.3rem] h-[2.3rem] text-white"

@@ -1,0 +1,18 @@
+[
+  {
+    "page": "Home",
+    "path": "#"
+  },
+  {
+    "page": "About me",
+    "path": "/aboutme"
+  },
+  {
+    "page": "Project",
+    "path": "#"
+  },
+  {
+    "page": "Contact",
+    "path": "#"
+  }
+]
