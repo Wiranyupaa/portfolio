@@ -1,14 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 :roots {
   --mgreen: #8c8c73;
   --mgray: #212121;
+  --mwhite: #fefefe;
 }
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+body {
+  margin: 0px;
+  overflow: hidden;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.typing {
+  letter-spacing: 10px;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(15) infinite, cursor 0.4s step-end alternate;
+}
+
+.outline-title {
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.split:hover {
+  background: black;
+  color: white;
+  margin: 0;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer components {
   .nav_link {
-    @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#8C8C73] text-white after:text-[#8C8C73] after:w-full after:scale-x-0 
+    @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#8C8C73] text-black after:text-[#8C8C73] after:w-full after:scale-x-0 
 		after:hover:scale-x-100 after:transition after:duration-300 after:origin-right;
   }
 }

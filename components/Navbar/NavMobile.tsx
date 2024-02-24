@@ -11,38 +11,42 @@ const NavMobile = ({ closeNav, showNav }: Props) => {
   return (
     <div>
       <div
-        className={`fixed top-0 ${navOpenStyle} transform transition-all duration-500 z-[10000] left-0 ring-0 bg-pink opacity-70 h-[100vh] w-[100vw]`}
+        className={`fixed top-0 ${navOpenStyle} transform transition-all duration-500 z-[10000] left-0 ring-0  opacity-100 h-[100vh] w-[100vw]`}
       >
         <ul
-          className={`fix flex ${navOpenStyle} text-white items-center flex-col justify-center h-[100%] transform transition-all duration-300 delay-300  w-[60%] bg-black space-y-14 z-[10010]`}
+          className={`fixed flex ${navOpenStyle} items-center flex-col justify-center h-[100%] transform transition-all duration-300 delay-250  w-[100%] bg-black space-y-14 z-[10010]`}
         >
           <li>
-            {" "}
-            <a className="nav_link text-[25px] sm:text-[30px]" href="#">
-              {" "}
-              Home{" "}
-            </a>{" "}
+            <a
+              className="nav_link text-white text-[25px] sm:text-[30px]"
+              href="#"
+            >
+              Home
+            </a>
           </li>
           <li>
-            {" "}
-            <a className="nav_link text-[25px] sm:text-[30px]" href="#">
-              {" "}
-              About me{" "}
-            </a>{" "}
+            <a
+              className="nav_link text-white text-[25px] sm:text-[30px]"
+              href="#"
+            >
+              About me
+            </a>
           </li>
           <li>
-            {" "}
-            <a className="nav_link text-[25px] sm:text-[30px]" href="#">
-              {" "}
-              Project{" "}
-            </a>{" "}
+            <a
+              className="nav_link text-white text-[25px] sm:text-[30px]"
+              href="#"
+            >
+              Project
+            </a>
           </li>
           <li>
-            {" "}
-            <a className="nav_link text-[25px] sm:text-[30px]" href="#">
-              {" "}
-              Contact{" "}
-            </a>{" "}
+            <a
+              className="nav_link text-white text-[25px] sm:text-[30px]"
+              href="#"
+            >
+              Contact
+            </a>
           </li>
           <RxCross2
             onClick={closeNav}

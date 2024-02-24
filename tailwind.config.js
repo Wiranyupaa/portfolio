@@ -10,6 +10,11 @@ const config = {
         logo: ["Space Grotesk", "sans-serif "],
         primary: ["Space Grotesk", "sans-serif "],
       },
+
+      colors: {
+        "primary-color": "var(--mwhite)",
+        "secondary-color": "var(--mgreen)",
+      },
     },
   },
   plugins: [],
