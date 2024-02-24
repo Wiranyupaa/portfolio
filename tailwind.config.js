@@ -5,7 +5,12 @@ const config = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        logo: ["Space Grotesk", "sans-serif "],
+        primary: ["Space Grotesk", "sans-serif "],
+      },
+    },
   },
   plugins: [],
 };

@@ -1,15 +1,14 @@
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import React from "react";
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default class Document extends NextDocument {
-  render() {
-    return (
-      <Html lang="en">
-        <Head></Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+export default function document() {
+  return (
+    <Html lang="en">
+      <Head />
+      <body className="font-primary">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
