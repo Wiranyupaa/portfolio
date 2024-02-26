@@ -5,9 +5,9 @@ const MyName = () => {
   const name = ["Wiranyupa"];
 
   return (
-    <div>
+    <div className=" md:mb-24  lg:mb-32 xl:mb-44">
       <div className="relative w-full flex justify-center content-center text-center ">
-        <div className="absolute outline-title lg:text-[248px] md:text-[128px] sm:text-[2rem] uppercase text-white pb-2 text-5xl font-bold text-center">
+        <div className="absolute outline-title lg:text-[248px] md:text-[128px] uppercase text-white pb-2 text-5xl font-bold text-center">
           {name.map((namee, index) => (
             <div className="" key={index}>
               {" "}
@@ -15,8 +15,8 @@ const MyName = () => {
             </div>
           ))}
         </div>
-        <div className="split absolute lg:text-[256px] md:text-[128px] sm:text-[2rem] bold uppercase">
-          Wiranyupa
+        <div className="split absolute lg:text-[256px] md:text-[128px]  sm:text-[256px] bold uppercase  ">
+          <p> Wiranyupa</p>
         </div>
       </div>
     </div>

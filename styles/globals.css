@@ -5,11 +5,28 @@
   --mgray: #212121;
   --mwhite: #fefefe;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0px;
   overflow: hidden;
   font-family: "Space Grotesk", sans-serif;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* gap:20px; */
+}
+
+/* .main div{
+    height: 100vh;
+    background: orange;
+    width: 100vw;
+} */
 
 .typing {
   letter-spacing: 10px;
@@ -26,6 +43,9 @@ body {
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.split {
+  line-height: 0.9;
+}
 .split:hover {
   background: black;
   color: white;
@@ -48,7 +68,7 @@ body {
 @tailwind utilities;
 @layer components {
   .nav_link {
-    @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#8C8C73] text-black after:text-[#8C8C73] after:w-full after:scale-x-0 
+    @apply relative text-lg w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#8C8C73] text-black after:text-[#8C8C73] after:w-full after:scale-x-0 
 		after:hover:scale-x-100 after:transition after:duration-300 after:origin-right;
   }
 }

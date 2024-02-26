@@ -28,27 +28,6 @@ const Navbar = ({ openNav }: Props) => {
           ))}
         </ul>
 
-        {/* <li>
-            <a className="nav_link" href="#">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#">
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#">
-              Project
-            </a>
-          </li>
-          <li>
-            <a className="nav_link" href="#">
-              Contact
-            </a>
-          </li> */}
-
         <FaBarsStaggered
           onClick={openNav}
           className="w-6 h-6 mx-5 text-black md:hidden rotate-180"

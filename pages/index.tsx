@@ -14,24 +14,28 @@ const HomePage = () => {
   const showNavHandler = () => setShowNav(true);
   const closeNavHandler = () => setShowNav(false);
   const pathname = usePathname();
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
+
+  // useEffect(() => {
+  //   if (isActive) setIsActive(false);
+  // }, [pathname]);
 
   useEffect(() => {
-    if (isActive) setIsActive(false);
-  }, [pathname]);
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-  // useLayoutEffect(() => {
-
-  //   gsap.registerPlugin(ScrollTrigger)
-
-  // })
-
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
   return (
-    <div className="bg-black w-full h-screen overflow-hidden">
+    <div className="main">
       <NavMobile showNav={showNav} closeNav={closeNavHandler} />
       <Navbar openNav={showNavHandler} />
       <Hero />
-      {/* <AboutMe /> */}
+      <AboutMe />
+      {/* <div>dsfjdksf</div>
+      <div>sdfsdf</div>
+      <div>dsffd</div> */}
     </div>
   );
 };
