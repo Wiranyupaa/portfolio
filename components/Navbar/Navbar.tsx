@@ -2,6 +2,7 @@ import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import dummy from "../../Data/dummy.json";
 import Link from "next/link";
+import { TfiHeartBroken } from "react-icons/tfi";
 
 interface Props {
   openNav: () => void;
@@ -11,11 +12,11 @@ const Navbar = ({ openNav }: Props) => {
   return (
     <header className="w-full fixed z-[1000]">
       <div
-        className=" flex items-center h-[4.5rem] justify-between 
-      shadow-lg shadow-black-0.3 bg-[#fefefe]  blackdrop-blur-[0.5rem] "
+        className="flex items-center h-[4.5rem] justify-between 
+      bg-[#fefefe] bg-opacity-50 blackdrop-blur-[0.5rem]  px-10"
       >
         <div className="text-[18px] mx-5">
-          <h1 className="color text-2xl "> Logo</h1>
+          <TfiHeartBroken className="color text-2xl w-10 h-10" />
         </div>
 
         <ul className="md:flex hidden items-center space-x-10 mx-5">
